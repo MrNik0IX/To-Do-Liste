@@ -1,0 +1,175 @@
+/*Standarteinstellungen*/
+*{
+  margin: 0;
+  padding: 0;
+}
+
+/* Einstellungen des Bodys*/
+body {
+  font-family: sans-serif;
+  margin: 0 50px;
+  background-color: orange;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/*Appeinstellungen*/
+.app {
+  background-color: rgb(151, 89, 18);
+  width: 400px;
+  height: 500px;
+  overflow-y: scroll;
+
+}
+
+/*Titel*/
+.mb-3{
+  text-decoration: underline;
+  text-align: center;
+  color: white;
+  font-weight: 700;
+  font-size: 40px;
+ 
+}
+
+h6{
+  text-decoration:underline ;
+  font-size: 35px;
+}
+
+/*Einstellungen für den Button um neue Tasks zu erstellen*/
+#newtask{
+  color: white;
+  font-weight: 600;
+  font-size:25px ;
+}
+
+.app::-webkit-scrollbar {
+  width: 0 !important;
+}
+
+#addNew {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: orange;
+  padding: 5px 10px;
+  cursor: pointer;
+  width: 300px;
+  height:40px;
+  margin-left: 35px;
+  margin-top: 30px;
+}
+
+.addlogo {
+  background-color: black;
+  padding: 3px;
+  border-radius: 3px;
+}
+
+/*Taskstitel*/
+#tyourtasks{
+text-align: center;
+color: white;
+margin-top: 30px;
+font-weight: 600;
+font-size: 20px;
+}
+
+/*Modaleinstellungen*/
+#form{
+ display: none;
+  position: absolute;
+  bottom: 43px;
+ right: 350px;
+}
+
+.modal-body{
+  display: flex;
+  gap: 70px;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+.modal-content{
+border:rgb(151, 89, 18) solid 40px ;
+
+height: 450px;
+width: 520px;
+margin-left: 35px;
+
+  background-color: rgb(255, 115, 0);
+}
+
+.modal-title{
+  color: white;
+  font-weight: 600;
+  font-size:25px ;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+.modal-header{
+  border-bottom: solid 3px white;
+}
+
+#closeButton{
+  width: 90px;
+  height: 50px;
+  background-color: rgb(142, 11, 11);
+  color: white;
+  font-weight: 500;
+}
+#add{
+  width: 90px;
+  height: 50px;
+  background-color: rgb(0, 89, 152);
+  color: white;
+  font-weight: 500;
+}
+/*Einstellungen für die Tasks welche angezeigt werden*/
+#tasks {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+#tasks div {
+  color: white;
+  background-color: rgb(74, 43, 43);
+  padding: 5px;
+  width: 300px;
+  margin-left: 37px;
+  display: grid;
+  gap: 4px;
+  margin-bottom: 10px;
+}
+
+#tasks div .options {
+  justify-self: center;
+  display: flex;
+  gap: 20px;
+}
+
+#tasks div .options i {
+  cursor: pointer;
+}
+
+#msg {
+  color: red;
+}
+#editB{
+float: right;
+}
+#searchBar{
+  margin-left: 100px;
+  width: 200px;
+  height: 40px;
+  margin-top: 30px;
+}
+
+#buttons{
+display: flex;
+}

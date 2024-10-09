@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TODO App</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Titel -->
+  <div class="app">
+    <h4 class="mb-3">Todo App</h4>
+
+    <!-- Suchleiste -->
+    <input type="text" id="searchBar" onkeyup="searchTasks()" placeholder="Search for tasks...">
+
+    <!-- Neue Task Erstellen -->
+    <div id="addNew" onclick="showModal()">
+      <span id="newtask">Create New Task</span>
+      <img src="./Images/addtasklogo.png" alt="" class="addlogo" width="25px">
+    </div>
+
+    <!-- Modalformular -->
+    <form class="modal" id="form" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" onsubmit="submitTask(event)">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Create New Task</h5>
+            <button type="button" class="btn-close" aria-label="Close" onclick="closeModal()"></button>
+          </div>
+          <div class="modal-body">
+            <div>
+              <p>Task Title</p>
+              <input type="text" class="form-control" name="title" id="titleInput" required>
+              <br><br>
+              <p>Autor</p>
+              <input type="text" class="form-control" name="author" id="autorInput" required>
+              <br><br>
+              <p>Startdatum</p>
+              <input type="date" class="form-control" name="startDate" id="sdateInput" required>
+              <br><br>
+              <p>Enddatum</p>
+              <input type="date" class="form-control" name="endDate" id="edateInput" required>
+              <br><br>
+              <p>Description</p>
+              <textarea name="description" class="form-control" id="descInput" cols="30" rows="5" required></textarea>
+            </div>
+            <div>
+              <p>Kategorie</p>
+              <select class="form-control" name="category" id="categorieInput" required>
+                <option value="Sport">Sport</option>
+                <option value="Arbeit">Arbeit</option>
+                <option value="Famillie">Famillie</option>
+                <option value="Freizeit">Freizeit</option>
+                <option value="Einkäufe">Einkäufe</option>
+              </select>
+              <br><br>
+              <p>Wichtig</p>
+              <label for="importanceInputF">Nein</label>
+              <input type="radio" class="form-control" name="importance" id="importanceInputF" value="false" required>
+              <label for="importanceInputT">Ja</label>
+              <input type="radio" class="form-control" name="importance" id="importanceInputT" value="true" required>
+              <br><br>
+              <p>Dringend</p>
+              <label for="dringlichkeitInputF">Nein</label>
+              <input type="radio" class="form-control" name="dringlichkeit" id="dringlichkeitInputF" value="false" required>
+              <label for="dringlichkeitInputT">Ja</label>
+              <input type="radio" class="form-control" name="dringlichkeit" id="dringlichkeitInputT" value="true" required>
+              <br><br>
+              <p>Erledigt in Prozent</p>
+              <input type="number" class="form-control" name="progress" id="erledigtInput" max="100" required>
+
+              <br><br><br><br><br>
+              <button type="button" id="closeButton" onclick="closeModal()">Close</button>
+              <button type="submit" id="add" class="btn btn-primary">Add</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <h5 id="tyourtasks">Your Tasks:</h5>
+    <!-- Tasks anzeigen hier -->
+    <div id="tasks"></div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
